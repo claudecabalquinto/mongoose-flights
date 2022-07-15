@@ -1,0 +1,27 @@
+<%- include('./partials/header') %>
+
+<h1>Flights Info</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Airline</th>
+        <th>Airport</th>
+        <th>FlightNo</th>
+        <th>Departs</th>
+      </tr>
+    </thead>
+    <tbody>
+
+<% movies.forEach(function(f) { %>
+    <tr>
+      <td><%= f.airline %></td>
+      <td><%= f.airport %></td>
+      <td><%= f.flightNo %></td>
+      <td><%= f.departs %></td>
+
+      <td><%= f.departs ? 'Yes' : 'Nope' %></td>
+          </tr>
+
+      <% }); %>
+
+<%- include('./partials/footer') %>
