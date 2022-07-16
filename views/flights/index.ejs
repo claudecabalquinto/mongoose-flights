@@ -1,4 +1,4 @@
-<%- include('./partials/header') %>
+<%- include('../partials/header') %>
 
 <h1>Flights Info</h1>
   <table>
@@ -12,7 +12,7 @@
     </thead>
     <tbody>
 
-<% movies.forEach(function(f) { %>
+<% flights.forEach(function(f) { %>
     <tr>
       <td><%= f.airline %></td>
       <td><%= f.airport %></td>
@@ -24,4 +24,4 @@
 
       <% }); %>
 
-<%- include('./partials/footer') %>
+<%- include('../partials/footer') %>

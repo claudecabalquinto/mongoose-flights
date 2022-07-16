@@ -19,7 +19,9 @@
           </select>
     </label><br>
     <label>FlightNo:
-        <input type="number" name="FlightNo">
+      <form>
+      <input type="text" required pattern="[A-Z][0-9][0-9][0-9]">
+    </form> 
       </label><br>
     <label>departs:
       <input type="datetime-local" name="Departs">
