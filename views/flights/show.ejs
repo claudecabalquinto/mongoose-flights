@@ -15,7 +15,7 @@
 
 <br><br><h2>Destinations</h2>
 <form id="add-destination-form" method="POST"
-  action="/flights/<%= flight._id %>/destinations">
+  action="/destinations/<%= flight._id %>">
   <label>Destinations:</label><br>
 
   <label>Airline:</label>
@@ -46,16 +46,19 @@
   <table>
     <thead>
       <tr>
-        <!-- <th>Date</th>
-        <th>Review</th>
-        <th>Rating</th> -->
+        <th>Airline</th>
+        <th>Airport</th>
+        <th>FlightNo</th>
+        <th>Arrivals</th>
       </tr>
     </thead>
     <tbody>
-      <% flight.destinations.forEach(function(f) { %>
+      <% flight.destinations.forEach(function(d) { %>
         <tr>
-          <td><%= f.content %></td>
-          <td><%= f.rating %></td>
+          <td><%= d.airline %></td>
+          <td><%= d.airport %></td>
+          <td><%= d.flightNo %></td>
+          <td><%= d.arrival %></td>
         </tr>
       <% }); %>
     </tbody>
