@@ -67,5 +67,22 @@
   <h5>No Destinations Yet</h5>
 <% } %>
 
-  
+<h1>Purchase</h1>
+
+<button><a href="/flights/<%= flight._id %>/tickets/new">Purchase</a></button>
+<table>
+<tbody>
+  <thead>
+    <th>Seat</th>
+    <th>Price</th>
+  </thead>
+  <% tickets.forEach(function(t) { %>
+    <tr>
+      <td><%= t.seat %></td>
+      <td><%= t.price %></td>
+    </tr>
+    <% }) %>
+</tbody>
+</table>
+
 <%- include('../partials/footer') %>

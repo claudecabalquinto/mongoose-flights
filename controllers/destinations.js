@@ -5,7 +5,6 @@ module.exports = {
 };
 
 function create(req, res) {
-    console.log('hello')
     Flight.findById(req.params.id, function(err, flight){
         flight.destinations.push(req.body);
         flight.save(function(err){
