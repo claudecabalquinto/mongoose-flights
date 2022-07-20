@@ -7,6 +7,21 @@ a {
   color: #00B7FF;
 }
 
+body > nav {
+  grid-area: nav;
+  background-color: lightslategrey;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20px 0 30px;
+}
+
+nav > img {
+  width: 34px;
+  object-fit: contain;
+  margin-right: auto;
+}
+
 #new-form {
   display: grid;
   grid-gap: 10px;
@@ -58,8 +73,9 @@ table td {
 #show-page {
   display: grid;
   grid-template-columns: auto auto;
-  grid-gap: 1rem;
+  grid-gap: 1vmin;
 }
+
 
 #show-page div:nth-child(even) {
   font-weight: bold;
